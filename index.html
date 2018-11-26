@@ -1,0 +1,57 @@
+<!-- Made by Michael Kusmirek 11/14/18
+      Assignment 6 GUI I FALL 2018 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiplication Table</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/a6.css">
+    <script src="js/a6.js"></script>
+  </head>
+<body>
+
+  <h2>Multiplication Table</h2>
+  <h4>Enter horizontal/vertical bounding numbers. Order does not matter.</h4>
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="H1">First Horizontal Bound</label>
+            <input type="text" class="form-control" id="H1">
+            <div class="invalid-feedback" id="H1fb">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="H2">Second Horizontal Bound</label>
+            <input type="text" class="form-control" id="H2">
+            <div class="invalid-feedback" id="H2fb">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="V1">First Vertical Bound</label>
+            <input type="text" class="form-control" id="V1">
+            <div class="invalid-feedback" id="V1fb">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="V2">Second Vertical Bound</label>
+            <input type="text" class="form-control" id="V2">
+            <div class="invalid-feedback" id="V2fb">
+            </div>
+        </div>
+    </div>
+
+
+<button class= "btn btn-primary" onclick="buildTable()">Print Table</button>
+<table class="table table-bordered"  id="displayTables">
+
+</table>
