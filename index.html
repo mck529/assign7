@@ -1,57 +1,42 @@
-<!-- Made by Michael Kusmirek 11/14/18
-      Assignment 6 GUI I FALL 2018 -->
-
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Multiplication Table</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/a6.css">
-    <script src="js/a6.js"></script>
+    <title>Multiplication Table Generator</title>
+    <link type="text/css" rel="stylesheet" href="css/a7.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <script src="js/a7.js"></script>
   </head>
-<body>
-
-  <h2>Multiplication Table</h2>
-  <h4>Enter horizontal/vertical bounding numbers. Order does not matter.</h4>
-    <div class="form-row">
-        <div class="col-md-4 mb-3">
-            <label for="H1">First Horizontal Bound</label>
-            <input type="text" class="form-control" id="H1">
-            <div class="invalid-feedback" id="H1fb">
-            </div>
-        </div>
-    </div>
-
-    <div class="form-row">
-        <div class="col-md-4 mb-3">
-            <label for="H2">Second Horizontal Bound</label>
-            <input type="text" class="form-control" id="H2">
-            <div class="invalid-feedback" id="H2fb">
-            </div>
-        </div>
-    </div>
-
-    <div class="form-row">
-        <div class="col-md-4 mb-3">
-            <label for="V1">First Vertical Bound</label>
-            <input type="text" class="form-control" id="V1">
-            <div class="invalid-feedback" id="V1fb">
-            </div>
-        </div>
-    </div>
-
-    <div class="form-row">
-        <div class="col-md-4 mb-3">
-            <label for="V2">Second Vertical Bound</label>
-            <input type="text" class="form-control" id="V2">
-            <div class="invalid-feedback" id="V2fb">
-            </div>
-        </div>
-    </div>
-
-
-<button class= "btn btn-primary" onclick="buildTable()">Print Table</button>
-<table class="table table-bordered"  id="displayTables">
-
-</table>
+  <body>
+    <fieldset>
+      <legend id="tableTitle">Please enter the table ranges. Order doesn't matter.</legend>
+      <form id="inputForm" action="" method="GET">
+        <table id="tblForm">
+          <tr>
+              <td>Column Bound 1</td>
+              <td><input type="text" id="xBegin" name="xBegin"></td>
+          </tr>
+          <tr>
+              <td>Column Bound 2</td>
+              <td><input type="text" id="xEnd" name="xEnd"></td>
+          </tr>
+          <tr>
+              <td>Row Bound 1</td>
+              <td><input type="text" id="yBegin" name="yBegin"></td>
+          </tr>
+          <tr>
+              <td>Row Bound 2</td>
+              <td><input type="text" id="yEnd" name="yEnd"></td>
+          </tr>
+          <tr>
+              <td colspan="2"><input type="button" value="Draw Table" id="draw">
+              <span id="msg"></span></td>
+          </tr>
+        </table>
+      <br>
+      <div id="placeholder"></div>
+      </fieldset>
+  </body>
+</html>
