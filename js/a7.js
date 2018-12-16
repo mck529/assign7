@@ -65,21 +65,48 @@ $(document).ready(function(){
         rules: {
           xBegin: {
             required: true,
-            digits: true
+            digits: true,
+            max: 50
           },
           xEnd: {
             required: true,
-            digits: true
+            digits: true,
+            max: 50
           },
           yBegin: {
             required: true,
-            digits: true
+            digits: true,
+            max: 50
           },
           yEnd: {
             required: true,
-            digits: true
+            digits: true,
+            max: 50
           }
-        }
+        },
+        messages: {
+          xBegin: {
+            required: "The first column bound is required.",
+            digits: "Please enter a positive number for the first column bound.",
+            max: "Please enter a number less than or equal to 50 for the first column bound."
+          },
+          xEnd: {
+            required: "The second column bound is required.",
+            digits: "Please enter a positive number for the second column bound.",
+            max: "Please enter a number less than or equal to 50 for the second column bound."
+          },
+          yBegin: {
+            required: "The first row bound is required.",
+            digits: "Please enter a positive number for the second row bound.",
+            max: "Please enter a number less than or equal to 50 for the second row bound."
+          },
+          yEnd: {
+            required: "The second row bound is required.",
+            digits: "Please enter a positive number for the second row bound.",
+            max: "Please enter a number less than or equal to 50 for the second row bound."
+          }
+
+          }
       });
 
     if ($("#inputForm").valid()) {
